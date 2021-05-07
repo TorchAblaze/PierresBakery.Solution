@@ -85,5 +85,15 @@ namespace PierresMenu.Tests
       int result = newPastryOrder.Amount;
       Assert.AreEqual(pastryAmount, result);
     }
+    [TestMethod]
+    public void SetAmount_SetAmount_Int()
+    {
+      int pastryAmount = 2;
+      Pastry newPastryOrder = new Pastry(pastryAmount);
+      int updatedAmount = 3;
+      newPastryOrder.Amount = updatedAmount;
+      int result = newPastryOrder.Amount;
+      Assert.AreEqual(updatedAmount, result);
+    }
   }
 }
