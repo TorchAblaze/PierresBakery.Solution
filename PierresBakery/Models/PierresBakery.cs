@@ -21,6 +21,10 @@ namespace PierresMenu.Models
     }
     public int OrderTotal()
     {
+      if (Amount > 1)
+      {
+        return (Amount * 5) - (Amount / 3 * 5);
+      }
       return Amount * 5;
     }
   }
