@@ -55,11 +55,18 @@ namespace PierresMenu.Tests
       CollectionAssert.AreEqual(newList, result);
     }
     [TestMethod]
-    public void ReturnOrderCost_ReturnsCostOfOrder_Int()
+    public void OrderTotal_ReturnsCostOfOrder_Int()
     {
       Bread newBreadOrder = new Bread(1);
-      int result = newBreadOrder.ReturnOrderCost();
+      int result = newBreadOrder.OrderTotal();
       Assert.AreEqual(5, result);
+    }
+    [TestMethod]
+    public void OrderTotal_ReturnsReducedCostOfOrder_Int()
+    {
+      Bread newBreadOrder = new Bread(15);
+      int result = newBreadOrder.OrderTotal();
+      Assert.AreEqual(50, result);
     }
   }
 }
