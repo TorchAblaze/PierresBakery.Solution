@@ -21,7 +21,8 @@ namespace PierresMenu.Models
     }
     public int ReturnOrderCost()
     {
-      return 0;
+
+      return Amount * 5;
     }
   }
 }
