@@ -70,8 +70,12 @@ namespace PierresMenu.Tests
     }
   }
   [TestClass]
-  public class PastryTests
+  public class PastryTests : IDisposable
   {
+    public void Dispose()
+    {
+      Pastry.ClearAll();
+    }
     public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
     {
       Pastry newPastryOrder = new Pastry(1);
@@ -99,6 +103,16 @@ namespace PierresMenu.Tests
     public void GetAll_ReturnsEmptyList_PastryList()
     {
       List<Pastry> newList = new List<Pastry> {};
+      List<Pastry> result = Pastry.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+    public void GetAll_ReturnsPastryOrders_PastryList()
+    {
+      int pastryAmount1 = 1;
+      int pastryAmount2 = 3;
+      Pastry newPastryOrder1 = new Pastry(pastryAmount1);
+      Pastry newPastryOrder2 = new Pastry(pastryAmount2);
+      List<Pastry> newList = new List<Pastry> { newPastryOrder1, newPastryOrder2 };
       List<Pastry> result = Pastry.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }

@@ -35,10 +35,15 @@ namespace PierresMenu.Models
     public Pastry(int amount)
     {
       Amount = amount;
+      _instances.Add(this);
     }
     public static List<Pastry> GetAll()
     {
       return _instances;
+    }
+    public static void ClearAll()
+    {
+      _instances.Clear();
     }
   }
 }
