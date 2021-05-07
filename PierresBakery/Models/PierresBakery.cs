@@ -47,6 +47,7 @@ namespace PierresMenu.Models
     }
     public int OrderTotal()
     {
+      // WIP
       return 0;
     }
   }
