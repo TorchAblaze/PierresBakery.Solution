@@ -28,4 +28,8 @@ namespace PierresMenu.Models
       return Amount * 5;
     }
   }
+  public class Pastry
+  {
+    
+  }
 }

@@ -69,4 +69,13 @@ namespace PierresMenu.Tests
       Assert.AreEqual(50, result);
     }
   }
+  [TestClass]
+  public class PastryTests
+  {
+    public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
+    {
+      Pastry newPastryOrder = new Pastry();
+      Assert.AreEqual(typeof(Pastry), newPastryOrder.GetType());
+    }
+  }
 }
