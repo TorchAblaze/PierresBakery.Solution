@@ -74,8 +74,16 @@ namespace PierresMenu.Tests
   {
     public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
     {
-      Pastry newPastryOrder = new Pastry();
+      Pastry newPastryOrder = new Pastry(1);
       Assert.AreEqual(typeof(Pastry), newPastryOrder.GetType());
+    }
+    [TestMethod]
+    public void GetAmount_ReturnsPastryAmount_Int()
+    {
+      int pastryAmount = 1;
+      Pastry newPastryOrder = new Pastry(pastryAmount);
+      int result = newPastryOrder.Amount;
+      Assert.AreEqual(pastryAmount, result);
     }
   }
 }
