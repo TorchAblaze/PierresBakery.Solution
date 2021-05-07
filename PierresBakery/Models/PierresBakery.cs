@@ -1,7 +1,12 @@
 namespace PierresMenu.Models
 {
-  public class PierresBakery
+  public class Bread
   {
-    // Code
+    public int Amount { get; set; }
+    public Bread(int amount)
+    {
+      Amount = amount;
+    }
+
   }
 }
