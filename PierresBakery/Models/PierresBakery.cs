@@ -19,5 +19,9 @@ namespace PierresMenu.Models
     {
       _instances.Clear();
     }
+    public int ReturnOrderCost()
+    {
+      return 0;
+    }
   }
 }
