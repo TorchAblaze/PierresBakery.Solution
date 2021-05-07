@@ -125,5 +125,12 @@ namespace PierresMenu.Tests
       int result = newPastryOrder.OrderTotal();
       Assert.AreEqual(2, result);
     }
+    [TestMethod]
+    public void OrdetTotal_ReturnsReducedCostOfOrder_Int()
+    {
+      Pastry newPastryOrder = new Pastry(10);
+      int result = newPastryOrder.OrderTotal();
+      Assert.AreEqual(17, result);
+    }
   }
 }
