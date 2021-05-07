@@ -12,7 +12,6 @@ namespace PierresMenu.Tests
       Bread newBreadOrder = new Bread(1);
       Assert.AreEqual(typeof(Bread), newBreadOrder.GetType());
     }
-    
     [TestMethod]
     public void GetAmount_ReturnsBreadAmount_Int()
     {
@@ -20,6 +19,16 @@ namespace PierresMenu.Tests
       Bread newBreadOrder = new Bread(breadAmount);
       int result = newBreadOrder.Amount;
       Assert.AreEqual(breadAmount, result);
+    }
+    [TestMethod]
+    public void SetAmount_SetAmount_Int()
+    {
+      int breadAmount = 2;
+      Bread newBreadOrder = new Bread(breadAmount);
+      int updatedAmount = 3;
+      newBreadOrder.Amount = updatedAmount;
+      int result = newBreadOrder.Amount;
+      Assert.AreEqual(updatedAmount, result);
     }
   }
 }
