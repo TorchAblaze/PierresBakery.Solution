@@ -47,9 +47,8 @@ namespace PierresMenu.Models
     }
     public int OrderTotal()
     {
-      // WIP
-      // return ((Amount/3 * 5) + ());
-      return 2;
+      int remainder = Amount % 3;
+      return (Amount / 3 * 5) + (remainder * 2);
     }
   }
 }
