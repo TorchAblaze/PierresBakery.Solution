@@ -31,9 +31,14 @@ namespace PierresMenu.Models
   public class Pastry
   {
     public int Amount { get; set; }
+    private static List<Pastry> _instances = new List<Pastry> {};
     public Pastry(int amount)
     {
       Amount = amount;
+    }
+    public static List<Pastry> GetAll()
+    {
+      return _instances;
     }
   }
 }

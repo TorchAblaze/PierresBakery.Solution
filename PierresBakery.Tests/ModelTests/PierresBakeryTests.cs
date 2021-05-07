@@ -95,5 +95,12 @@ namespace PierresMenu.Tests
       int result = newPastryOrder.Amount;
       Assert.AreEqual(updatedAmount, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_PastryList()
+    {
+      List<Pastry> newList = new List<Pastry> {};
+      List<Pastry> result = Pastry.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
