@@ -6,8 +6,12 @@ using System.Collections.Generic;
 namespace PierresMenu.Tests
 {
   [TestClass]
-  public class BreadTests
+  public class BreadTests : IDisposable
   {
+    public void Dispose()
+    {
+      Bread.ClearAll();
+    }
     [TestMethod]
     public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {

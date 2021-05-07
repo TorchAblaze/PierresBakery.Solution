@@ -9,10 +9,15 @@ namespace PierresMenu.Models
     public Bread(int amount)
     {
       Amount = amount;
+      _instances.Add(this);
     }
     public static List<Bread> GetAll()
     {
       return _instances;
+    }
+    public static void ClearAll()
+    {
+      _instances.Clear();
     }
   }
 }
