@@ -1,5 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierresMenu.Models;
+using System;
+using System.Collections.Generic;
 
 namespace PierresMenu.Tests
 {
@@ -29,6 +31,13 @@ namespace PierresMenu.Tests
       newBreadOrder.Amount = updatedAmount;
       int result = newBreadOrder.Amount;
       Assert.AreEqual(updatedAmount, result);
+    }
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_BreadList()
+    {
+      List<Bread> newList = new List<Bread> {};
+      List<Bread> result = Bread.GetAll();
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
