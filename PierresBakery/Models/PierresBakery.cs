@@ -45,5 +45,9 @@ namespace PierresMenu.Models
     {
       _instances.Clear();
     }
+    public int OrderTotal()
+    {
+      return 0;
+    }
   }
 }

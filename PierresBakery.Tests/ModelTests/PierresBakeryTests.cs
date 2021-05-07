@@ -76,6 +76,7 @@ namespace PierresMenu.Tests
     {
       Pastry.ClearAll();
     }
+    [TestMethod]
     public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
     {
       Pastry newPastryOrder = new Pastry(1);
@@ -106,6 +107,7 @@ namespace PierresMenu.Tests
       List<Pastry> result = Pastry.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
     public void GetAll_ReturnsPastryOrders_PastryList()
     {
       int pastryAmount1 = 1;
@@ -115,6 +117,13 @@ namespace PierresMenu.Tests
       List<Pastry> newList = new List<Pastry> { newPastryOrder1, newPastryOrder2 };
       List<Pastry> result = Pastry.GetAll();
       CollectionAssert.AreEqual(newList, result);
+    }
+    [TestMethod]
+    public void OrderTotal_ReturnsCostOfOrder_Int()
+    {
+      Pastry newPastryOrder = new Pastry(1);
+      int result = newPastryOrder.OrderTotal();
+      Assert.AreEqual(2, result);
     }
   }
 }
