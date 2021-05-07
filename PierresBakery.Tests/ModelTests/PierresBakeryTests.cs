@@ -39,5 +39,16 @@ namespace PierresMenu.Tests
       List<Bread> result = Bread.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsBreadOrders_BreadList()
+    {
+      int breadAmount1 = 1;
+      int breadAmount2 = 3;
+      Bread newBreadOrder1 = new Bread(breadAmount1);
+      Bread newBreadOrder2 = new Bread(breadAmount2);
+      List<Bread> newList = new List<Bread> { newBreadOrder1, newBreadOrder2 };
+      List<Bread> result = Bread.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
