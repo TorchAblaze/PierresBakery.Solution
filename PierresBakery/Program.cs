@@ -1,7 +1,7 @@
 using System;
-using TemplateNameSpace.Models;
+using PierresMenu.Models;
 
-namespace TemplateNameSpace 
+namespace PierresMenu 
 {
   public class Program
   {
