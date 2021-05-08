@@ -1,12 +1,12 @@
-# Project Name
+# Pierre's Bakery
 
-#### _Brief Project Description, 5/7/2021_
+#### _A place to order bread and pastries, 5/7/2021_
 
 #### By _**Tiffany Greathead**_
 
 ## Description
 
-Project Description.
+Pierre's Bakery is a command line interface program built with C#. A user can choose whether they would like to buy loaves of bread or pastries by typing in 'b' or 'p' on their keyboard. Next, the program will ask how much of the product the user would like to buy. The program will generate the total for that order and give the user one more chance to add anything else to their order. Once both orders are complete, the program will return the overall total of all orders made and exit.
 
 ## Setup and Use
 
@@ -18,23 +18,24 @@ Project Description.
 
 ### Installation
 
-1. Clone the repository: `$ git clone {clone link}`
-2. Navigate to the `{Template.Solution}` directory on your computer
+1. Clone the repository: `$ git clone https://github.com/TorchAblaze/PierresBakery.Solutions.git`
+2. Navigate to the `PierresBakery.Solutions` directory on your computer
 3. Open with your preferred text editor to view the code base
 4. To run the console app:
-   - Navigate to `{Template.Solution/Template}` in your command line
-   - Run the command `dotnet restore` to restore the dependencies that are listed in `{Template.csproj}`
+   - Navigate to `PierresBakery.Solutions/PierresBakery` in your command line
+   - Run the command `dotnet restore` to restore the dependencies that are listed in `PierresBakery.csproj`
    - Run the command `dotnet build` to build the project and its dependencies into a set of binaries
    - Finally, run the command `dotnet run` to run the project!
    - Note: `dotnet run` also restores and builds the project, so you can use this single command to start the console app
 5. To run tests:
-   - Navigate to `{Template.Solution/Template.Tests}` in your command line.
-   - Run the command `dotnet restore` to restore the dependencies that are listed in `{Template.Tests.csproj}`
+   - Navigate to `PierresBakery.Solutions/PierresBakery.Tests` in your command line.
+   - Run the command `dotnet restore` to restore the dependencies that are listed in `PierresBakery.Tests.csproj`
    - Finally, run the command `dotnet test` to run the tests!
 
 ## Known Bugs
 
-_No known bugs_
+- No error handling for improper amount input
+- Clean up file layout
 
 ## Support and contact details
 
