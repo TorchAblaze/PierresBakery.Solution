@@ -6,7 +6,7 @@
 
 ## Description
 
-Pierre's Bakery is a command line interface program built with C#. A user can choose whether they would like to buy loaves of bread or pastries by typing in "b" or "p" on their keyboard. Next, the program will ask how much of the product the user would like to buy and generate the total for that order. The user is allowed multiple chances to add anything else to their order until the user types "e" to exit. Once the user types "e", the program will return the overall total of all orders made and exit.
+Pierre's Bakery is a command line interface program built with C#. A user can choose whether they would like to buy loaves of bread or pastries by typing in "b" or "p" on their keyboard. Next, the program will ask how much of the product the user would like to buy and generate the total cost for that order. The user is allowed multiple chances to add anything else to their order until the user types "e" to exit. Once the user types "e", the program will return the overall total cost of all orders made and exit.
 
 ## Setup and Use
 
