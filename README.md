@@ -34,7 +34,7 @@ Pierre's Bakery is a command line interface program built with C#. A user can ch
 
 ## Known Bugs
 
-- No error handling for improper amount input
+- _No known bugs_
 
 ## Support and contact details
 
