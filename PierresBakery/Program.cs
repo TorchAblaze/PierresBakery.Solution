@@ -42,6 +42,12 @@ Due to the effects of Covid 19, we are only offering bread and pastries at the m
           try
           {
             int breadAmount = int.Parse(Console.ReadLine());
+            while (breadAmount < 0)
+            {
+              Console.WriteLine($"That was an invalid response. Please try again.");
+              Console.WriteLine("\nYou chose to buy bread! Bread prices are: Buy 2, get 1 free.\nPlease enter the amount of loaves you would like to buy today: ");
+              breadAmount = int.Parse(Console.ReadLine());
+            }
             string loafWord = Program.pluralize("loaves", "loaf", breadAmount);
             Bread breadOrder = new Bread(breadAmount);
             total += breadOrder.OrderTotal();
@@ -62,6 +68,12 @@ Due to the effects of Covid 19, we are only offering bread and pastries at the m
           try
           {
             int pastryAmount = int.Parse(Console.ReadLine());
+            while (pastryAmount < 0)
+            {
+              Console.WriteLine($"That was an invalid response. Please try again.");
+              Console.WriteLine("\nYou chose to buy pastries! Pastry prices are: Buy 1 for $2 or 3 for $5\nPlease enter the amount of pastries you would like to buy today: ");
+              pastryAmount = int.Parse(Console.ReadLine());
+            }
             string pastryWord = Program.pluralize("pastries", "pastry", pastryAmount);
             Pastry pastryOrder = new Pastry(pastryAmount);
             Console.WriteLine($"\nYou ordered {pastryAmount} {pastryWord}! Your total for this order is ${pastryOrder.OrderTotal()}.00.\n");
